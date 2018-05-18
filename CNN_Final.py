@@ -96,7 +96,7 @@ def image_to_jpeg(files, labels, width=80, height=140, gray=True, normalize=True
             raw_image = tf.image.resize_images(raw_image, (width, height), method=method)
 
         if gray:
-            raw_image = tf.image.rgb_to_grayscale(raw_image)
+            #raw_image = tf.image.rgb_to_grayscale(raw_image)
             raw_image = tf.reshape(raw_image, [width, height, 1])  # -1
         else:
             raw_image = tf.reshape(raw_image, [width, height, 3])  # -1
